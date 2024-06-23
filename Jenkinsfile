@@ -6,6 +6,10 @@ pipeline {
    
   }
 
+//   environment{
+//     PATH = "/opt/apche-maven-3.9.8/bin:$PATH"
+//   }
+
   stages {
     // stage('Clone') {
     //   steps {
@@ -21,9 +25,11 @@ pipeline {
     //   }
     // }
 
+    
+
     stage('Build'){
         steps{
-            echo 'Hello World'
+         sh 'mv clean deploy'
         }
     }
   }
