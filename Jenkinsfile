@@ -14,6 +14,7 @@ pipeline {
     
 
     stage('Build'){
+      
         steps{
          sh '/opt/maven/bin/mvn clean deploy'
         }
@@ -22,6 +23,7 @@ pipeline {
 
   stage('SonarQube analysis'){
     environment {
+      JAVA_HOME="/usr/lib/jvm/java-17-openjdk-amd64/bin/java"
       scannerHome = tool 'java-sonar-scanner'
        }
        steps{
