@@ -18,9 +18,9 @@ pipeline {
          sh '/opt/maven/bin/mvn clean deploy'
         }
     }
-  }
+  
 
-  stage('Sonar'){
+  stage('SonarQube analysis'){
     environemt {
       scannerHome = tool 'java-sonar-scanner'
        }
@@ -29,9 +29,7 @@ pipeline {
           sh "${scannerHome}/bin/sonar-scanner"
         }
        }
-   
-
-
+  }
   }
 
   post {
