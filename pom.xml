@@ -38,7 +38,7 @@
             <artifactId>github-api</artifactId>
             <version>1.99</version>
         </dependency>
-         <!-- https://mvnrepository.com/artifact/org.twitter4j/twitter4j-core -->
+        <!-- https://mvnrepository.com/artifact/org.twitter4j/twitter4j-core -->
         <dependency>
             <groupId>org.twitter4j</groupId>
             <artifactId>twitter4j-core</artifactId>
@@ -93,15 +93,15 @@
                     <target>17</target>
                 </configuration>
             </plugin>
-          <plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M5</version> <!-- Ensure the version supports Java 17 -->
                 <configuration>
                     <argLine>--add-opens=java.base/java.lang=ALL-UNNAMED</argLine>
                 </configuration>
-
-			 <plugin>
+            </plugin>
+            <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.8.7</version> <!-- Updated Jacoco Plugin -->
